@@ -1,0 +1,21 @@
+# 端口号
+server:
+  port: 8888
+# eureka注册信息
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: sms-platform-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@gitee.com:cenyu10/sms-platform-config.git
+          # git远程仓库地址, {application}是指根据服务名称到git中找指定配置
+          default-label: master
+          strict-host-key-checking: false
+          search-paths: '*'
+          ignore-local-ssh-settings: false
