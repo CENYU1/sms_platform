@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: sms-platform-cache
+  cloud:
+    config:
+      discovery:
+        enabled: true                       # 开启configclient
+        service-id: sms-platform-config     # ConfigServer在Eureka上的服务名称
+      label: master                         # 指定使用哪个分支（默认master）
+      profile: '@profileActive@'            # 指定使用仓库中的哪个环境配置文件
+# eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka # 不能写在Git仓库中，因为需要用过Eureka找到configServer
