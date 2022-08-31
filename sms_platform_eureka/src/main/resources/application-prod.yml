@@ -1,0 +1,19 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: sms-platform-eureka
+# 这里使用单机版Eureka
+eureka:
+  client:
+    # 表示是否将自己注册到Eureka Server，默认为true
+    registerWithEureka: true
+    # 表示是否从Eureka Server获取注册信息，默认为true
+    fetchRegistry: true
+    # 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+  # Eureka自我保护机制关闭, 当开启自我保护机制开启后，实例不会删除，
+  # 导致部分请求会连接不存在的实例，客户端没有做重试或者熔断的话会出大量问题
+  server:
+    enable-self-preservation: false

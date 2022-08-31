@@ -1,0 +1,5 @@
+spring:
+  # 多环境配置
+  profiles:
+    # 引入pom.xml中的多环境文件信息
+    active: @profileActive@
