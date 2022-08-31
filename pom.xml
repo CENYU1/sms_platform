@@ -10,6 +10,7 @@
     <modules>
         <module>sms_platform_eureka</module>
         <module>sms_platform_configserver</module>
+        <module>sms_platform_common</module>
     </modules>
 
     <properties>
