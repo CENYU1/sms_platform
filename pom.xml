@@ -12,6 +12,7 @@
         <module>sms_platform_configserver</module>
         <module>sms_platform_common</module>
         <module>sms_platform_cache</module>
+        <module>sms_platform_interface</module>
     </modules>
 
     <properties>
