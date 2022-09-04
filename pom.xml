@@ -13,6 +13,7 @@
         <module>sms_platform_common</module>
         <module>sms_platform_cache</module>
         <module>sms_platform_interface</module>
+        <module>sms_platform_webmaster</module>
     </modules>
 
     <properties>
